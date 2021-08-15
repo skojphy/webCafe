@@ -1,4 +1,5 @@
 @import url('./fonts.css');
+@import url('./fontello.css');
 
 *,
 *::before,
@@ -28,6 +29,65 @@ body {
     font-weight: 400;
     margin: 0;
     /* background: linear-gradient(#CCC 0%, #EEE 35%, #EEE 50%, #FFF 100%); */
+}
+
+/* 
+.skip-navi{
+    background-color: black;
+    border: none;
+}
+
+.skip-navi a{
+    display: block;
+    width: 100px;
+    margin: auto;
+    color: white;
+    height: 0;
+    border: none;
+}
+
+.skip-navi a:focus{
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    text-decoration: none;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+} */
+
+/* 스킵 네비게이션 */
+
+.skip-navigation {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    font-size: 0.875rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.skip-navigation a {
+    position: absolute;
+    color: #FFF;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: insert(50%);
+    margin: -1px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.skip-navigation a:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: initial;
+    clip-path: initial;
+    margin: initial;
+    display: inline-block;
+    outline-offset: -10px;
 }
 
 .container {
@@ -279,10 +339,11 @@ body {
 }
 
 .main {
-    background-color: #f0ad9c;
+    background-color: #FFF;
     display: flow-root;
     padding: 30px 15px;
     min-height: 450px;
+    border-radius: 15px 15px 0 0;
     /* height: 50vh;
     display: flex;
     padding: 30px;
@@ -356,13 +417,11 @@ legend {
 } */
 
 .group2 {
-    background-color: lightsalmon;
     float: left;
     width: 380px;
 }
 
 .group3 {
-    background-color: #93bedf;
     float: left;
     width: 190px;
 }
@@ -417,12 +476,15 @@ legend {
     position: absolute;
     top: 0;
     right: 0;
-    background: rgb(187, 35, 68);
-    border: 1px solid #eee;
-    color: #FFF;
-    height: 50px;
     width: 50px;
-    border-radius: 10px;
+    height: 50px;
+    border: 1px solid #e8852e;
+    background-color: #ed552f;
+    color: #fff;
+    padding: 0;
+    font-size: 0.75rem;
+    /* 12px */
+    border-radius: 3px;
 }
 
 .sign {
@@ -501,6 +563,144 @@ legend {
     margin: 10px;
     background: url(./images/validation_icon.png) no-repeat 10px, linear-gradient(#CCC 0%, #EEE 100%); 
 } */
+
+
+/* 웹 관련 용어 */
+/* .term {
+    border: 1px solid #AAA;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #CCC, #EEE);
+    margin-top: 20px;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.term-heading {
+    font-size: 0.938rem;
+    margin: 0;
+}
+
+.term-list-subject{
+    display: block;
+    float: right;
+    color: #296897;
+}
+
+.term-list-thumbnail {
+    float: left;
+    margin-left: 0;
+}
+
+.term-list-brief{
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+} */
+.term {
+    background: #CCC linear-gradient(#CCC, #EEE);
+    border: 1px solid #AAA;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.term-heading {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.term-list {
+    /* display: flow-root; 크로스브라우징 지원 안 됨 */
+    margin: 10px 0 0 0;
+    font-size: 0.875rem;
+}
+
+.term-list:after {
+    content: "";
+    display: block;
+    ;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    float: right;
+    width: 145px;
+}
+
+.term-list-subject {
+    line-height: 1;
+    color: #277684;
+    margin-bottom: 5px;
+    /* margin-top: -3px; */
+}
+
+.term-list dd {
+    margin-left: 0;
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list-brief {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.even .term-list {
+    margin-top: 10px;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+    float: left;
+}
+
+.even .term-list-thumbnail {
+    float: right;
+    margin: 0;
+}
+
+.search-form{
+    background: #CCC linear-gradient(#CCC, #EEE);
+    padding: 15px 25px 10px 15px;
+    border: 1px solid #AAA;
+    border-bottom-color: #FFF;
+    border-radius: 15px 15px 0 0;
+    font-size: 0.875rem;
+}
+.search-form *{
+    vertical-align: middle;
+}
+.search-form fieldset{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.search-form label{
+    line-height: 1;
+}
+
+.search-form input{
+    appearance: none;
+    border: 1px solid #AAA;
+    height: 22px;
+    border-radius: 2px;
+    padding: 1px 1px 1px 5px;
+    margin: 0 10px;
+    width: 198px;
+}
+.button-search{
+    border: 0;
+    padding: 0 10px;
+    background: #000;
+    color: #FFF;
+    height: 22px;
+    font-size: 0.75rem;
+    border-radius: 2px;
+}
+
 
 /* 슬로건 */
 .slogan {
