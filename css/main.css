@@ -701,6 +701,79 @@ legend {
     border-radius: 2px;
 }
 
+/* 공지사항 및 자료실 */
+.board{
+    margin-top: 20px;
+    position: relative;
+    height: 200px;
+}
+
+.board ul, .board .more{
+    display: none;
+}
+
+.is-active ul, .is-active .more{
+    display: block !important;
+}
+
+.board .tab{
+    position: absolute;
+    top: 0;
+    background-color: #CCC linear-gradient(to bottom, #CCC, #EEE);
+    color: #666;
+    padding: 5px 10px;
+    border: 1px solid #AAA;
+    border-radius: 5px 5px 0 0;
+    font-size: 0.875rem;
+}
+
+.is-active .tab{
+    background-color: #FFF !important;
+    color: #e85b2c !important;
+    border-color: #e85b2c #e85b2c #FFF #e85b2c;
+}
+
+.notice .tab{
+    left: 0;
+}
+
+.pds .tab{
+    left: 69px;
+}
+
+.board ul{
+    padding: 35px 0 0 0;
+    list-style: none;
+    margin: 0;
+}
+
+.board li{
+    margin-top: 10px;
+    font-size: .875rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.board ul a{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.board time{
+
+
+}
+
+.board .more{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.more .icon-plus{
+    color: hsla(110, 70%, 30%, 1);
+}
 
 /* 슬로건 */
 .slogan {
